@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="f46838f8-8267-472f-b53d-d1cc3fd22ad2" name="Default Changelist" comment="" />
+    <list default="true" id="f46838f8-8267-472f-b53d-d1cc3fd22ad2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +50,12 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -48,11 +76,37 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606787307243</updated>
-      <workItem from="1606787308341" duration="1622000" />
+      <workItem from="1606787308341" duration="2383000" />
+      <workItem from="1606958279687" duration="7765000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="978" y="285" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606968461721">
+      <screen x="0" y="0" width="1664" height="1069" />
+    </state>
+    <state x="978" y="285" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1664.1069@0.0.1664.1069" timestamp="1606968461721" />
+    <state x="292" y="436" key="Github.ShareDialog" timestamp="1606788929006">
+      <screen x="0" y="0" width="1664" height="1069" />
+    </state>
+    <state x="292" y="436" key="Github.ShareDialog/0.0.1664.1069@0.0.1664.1069" timestamp="1606788929006" />
+    <state x="215" y="236" key="Github.UntrackedFilesDialog" timestamp="1606788934815">
+      <screen x="0" y="0" width="1664" height="1069" />
+    </state>
+    <state x="215" y="236" key="Github.UntrackedFilesDialog/0.0.1664.1069@0.0.1664.1069" timestamp="1606788934815" />
   </component>
 </project>

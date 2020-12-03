@@ -1,47 +1,84 @@
-$(document).ready(function (){
+$(document).ready(function () {
 
     $("form").submit(calculateGrade);
+    $("#sortByName").click(outputName);
+    $("#sortByPercent").click(outputPercent);
+
+    var studentList = [];
 
     function calculateGrade(event) {
         event.preventDefault();
 
-        var grade = {};
+        var student = {};
 
-        grade["firstName"] = $("#firstName").val();
-        grade["lastName"] = $("#lastName").val();
-        grade["pointsEarned"] = parseFloat($("#points").val());
-        grade["possiblePoints"] = parseFloat($("#possiblePoints").val());
+        student.firstName = $("#firstName").val();
+        student.lastName = $("#lastName").val();
+        student.pointsEarned = parseFloat($("#points").val());
+        student.pointsPossible = parseFloat($("#possiblePoints").val());
 
-        var gradePercentage = (grade.pointsEarned / grade.possiblePoints) * 100;
-        var roundedPercentage = gradePercentage.toFixed(2);
+        student.percentage = (student.pointsEarned / student.pointsPossible) * 100;
 
-        var letterGrade;
-
-        if (gradePercentage >= 90)
-        {
-            letterGrade = "A";
-        }
-        else if (gradePercentage >= 80)
-        {
-            letterGrade = "B";
-        }
-        else if (gradePercentage >= 70)
-        {
-            letterGrade = "C";
-        }
-        else if (gradePercentage >= 60)
-        {
-            letterGrade = "D";
-        }
-        else
-        {
-            letterGrade = "F";
+        if (student.percentage >= 90) {
+            student.grade = "A";
+        } else if (student.percentage >= 80) {
+            student.grade = "B";
+        } else if (student.percentage >= 70) {
+            student.grade = "C";
+        } else if (student.percentage >= 60) {
+            student.grade = "D";
+        } else {
+            student.grade = "F";
         }
 
-        $("#firstNameOutput").text("Student first name: " + grade.firstName);
-        $("#lastNameOutput").text("Student last name: " + grade.lastName);
-        $("#percentOutput").text("Grade percentage: " + roundedPercentage + "%");
-        $("#gradeOutput").text("Letter grade: " + letterGrade);
+        studentList.push(student);
+
+        for (var x of studentList) {
+            var output = `${x.firstName} ${x.lastName} , ${x.percentage.toFixed(0)}% , ${x.grade}`;
+        }
+        $("#gradeOutput").text(output);
     }
 
+    function sortByName(name1, name2) {
+        if (name1.lastName < name2.lastName) {
+            return -1;
+        }
+        else if (name1.lastName > name2.lastName) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    function outputName(event) {
+        event.preventDefault();
+        studentList.sort(sortByName);
+
+        for (var x of studentList) {
+            var output = `${x.firstName} ${x.lastName} , ${x.percentage.toFixed(0)}% , ${x.grade}`;
+        }
+        $("#nameOutput").text(output);
+    }
+
+    function sortByPercent(grade1, grade2) {
+        if (grade1.percentage < grade2.percentage) {
+            return -1;
+        }
+        else if (grade1.percentage > grade2.percentage) {
+            return 1;
+        }
+        else {
+            return 0;
+        }
+    }
+
+    function outputPercent(event) {
+        event.preventDefault();
+        studentList.sort(sortByPercent);
+
+        for (var x of studentList) {
+            var output = `${x.firstName} ${x.lastName} , ${x.percentage.toFixed(0)}% , ${x.grade}`;
+        }
+        $("#percentOutput").text(output);
+    }
 });
